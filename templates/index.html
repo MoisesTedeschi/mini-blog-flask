@@ -10,6 +10,20 @@
                     Seja Bem-Vindo ao Mini Blog do Moa
                 {% endblock %}
                 </h1>
+                
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm mt-5">
+                {% for post in posts %}
+
+                    <a href="#">
+                        <h2>{{ post['title'] }}</h2>
+                    </a>
+                    <span class="badge badge-primary">{{ post['created'] }}</span>
+                    <hr>
+
+                {% endfor %}
             </div>
         </div>
     </div>

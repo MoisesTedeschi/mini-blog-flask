@@ -12,6 +12,7 @@ def get_db_connection():
 
 app = Flask(__name__)
 
+
 @app.route('/')
 def index():
     conn = get_db_connection()

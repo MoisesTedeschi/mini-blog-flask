@@ -1,6 +1,8 @@
 import sqlite3
+import os
+import random
 
-from flask import Flask, render_template
+from flask import Flask, render_template, request, url_for, flash, redirect
 from werkzeug.exceptions import abort
 
 
@@ -24,6 +26,8 @@ def get_post(post_id):
 
 
 app = Flask(__name__)
+SECRET_KEY = os.urandom(32)
+app.config['SECRET_KEY'] = SECRET_KEY
 
 
 @app.route('/')

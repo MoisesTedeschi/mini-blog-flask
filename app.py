@@ -48,6 +48,23 @@ def post(post_id):
 
 @app.route('/create', methods=('GET', 'POST'))
 def create():
+    if request.method == 'POST':
+        titulo = request.form['title']
+        conteudo = request.form['content']
+
+        if not titulo:
+            flash('O título é obrigadótio. Por favor, informe!')
+
+        else:
+            conn = get_db_connection()
+            conn.execute('INSERT INTO posts (title, content) VALUES (?, ?)',
+                         (titulo, conteudo))
+
+            conn.commit()
+            conn.close()
+
+            return redirect(url_for('index'))
+
     return render_template('create.html')
 
 

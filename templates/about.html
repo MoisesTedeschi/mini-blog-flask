@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm">
+                <h1 class="text-center mt-5">
+                    {% block title %}
+                        {{ title }}
+                    {% endblock %}
+                </h1>
+                
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm mt-5">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                    Aenean lacus justo, tincidunt sit amet lectus at, scelerisque 
+                    imperdiet justo. Curabitur porta blandit blandit. Quisque ex sem, 
+                    faucibus non aliquam nec, suscipit eget nisl. Cras imperdiet nunc a 
+                    erat porttitor, sed dictum metus vehicula. Vestibulum eget metus placerat, 
+                    luctus nunc id, faucibus urna. Donec elementum, justo non venenatis 
+                    viverra, massa tortor auctor eros, sed hendrerit massa sapien semper eros. 
+                    Aliquam erat volutpat. Class aptent taciti sociosqu ad litora torquent per 
+                    conubia nostra, per inceptos himenaeos. Donec id tempor dui, semper imperdiet
+                    orci. Curabitur laoreet auctor ultricies. Interdum et malesuada fames ac 
+                    ante ipsum primis in faucibus. Fusce pharetra leo ut sapien sodales, 
+                    ullamcorper posuere sem accumsan. Interdum et malesuada fames ac ante 
+                    ipsum primis in faucibus. Mauris nec pretium lectus. Quisque tincidunt nibh
+                    nec mollis viverra. Sed nec urna elit.
+                </p>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
